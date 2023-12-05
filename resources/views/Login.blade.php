@@ -1,61 +1,71 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Login</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | LOKAL.</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/fahli.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="img/logo.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-align: center;
-        }
-        h2 {
-            margin-bottom: 20px;
-        }
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        #create-account-link {
-            margin-top: 10px;
-            color: #007bff;
-            text-decoration: none;
-        }
+      .card {
+        width: 350px;
+        margin: 0 auto;
+        float: none;
+        color: #5CB8E4;
+      }
+      .halaman-login {
+        background-color: #5CB8E4;
+      }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Login</h2>
-        <form id="login-form" method="POST" action="{{ route('login.store') }}">
-            @csrf
-            <input type="text" name="username" placeholder="Username" required><br>
-            <input type="password" name="password" placeholder="Password" required><br>
-            <button type="submit" class="btn">Masuk</button>
-        </form>
-        <a href="/Registration">Belum punya akun? Buat akun</a>
-    </div>
 
-</body>
+    <body class="halaman-login">
+      <div class="container">
+        <div class="card text-center position-absolute top-50 start-50 translate-middle">
+          <div class="card-header">
+            <h1 style="text-align: center">Login</h1>
+            <h5 style="text-align: center">silahkan login dahulu</h5>
+          </div>
+          <div class="card-body" style="background-color: #5CB8E4">
+            <form autocomplete="off" action="" class="" method="POST">
+              <input type="hidden" id="action" value="login" />
+              <div class="m-2">
+                <input
+                  type="text"
+                  class="form-control login__input"
+                  name="username"
+                  placeholder="masukkan username"
+                  id="username"
+                  value=""
+                />
+              </div>
+              <div class="m-2">
+                <input
+                  type="password"
+                  class="form-control login__input"
+                  name="password"
+                  placeholder="masukkan password"
+                  id="password"
+                  value=""
+                />
+              </div>
+              <div class="m-2" style="float: center">
+                <button class="btn btn-danger" type="button" onclick="submitData();">Masuk</button>
+              </div>
+              <div>
+                <a href="lupapassword" style="color: white">Lupa password?</a>
+              </div>
+              <div>
+                <a href="register.php" style="color: white">Belum punya akun?</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script src="js/bootstrap.min.js"></script>
+  </html>
 </html>
-
-
