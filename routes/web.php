@@ -27,6 +27,10 @@ Route::get('/checkoutt', function () {
     return view('checkoutt');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
 
 
 
