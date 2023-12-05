@@ -1,4 +1,8 @@
 <?php
+
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegistrationController;
+
 Route::get('/', function () {
     return view('index');
 });
@@ -30,6 +34,18 @@ Route::get('/checkoutt', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/login', [AuthController::class, 'showLoginForm']);
+Route::post('/login', [AuthController::class, 'login'])->name('login.store');
+Route::get('/website', [AuthController::class, 'website']);
+
+Route::get('/Registration', [RegistrationController::class, 'showRegistrationForm']);
+Route::post('/Registration', [RegistrationController::class, 'register'])->name('register.store');
+
+
+
+
+
 
 
 

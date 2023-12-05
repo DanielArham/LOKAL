@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users1', function (Blueprint $table) {
-            $table->id();
-            $table->text('username');
-            $table->text('password');
-            $table->timestamps();
-        });
+       // Contoh migrasi
+Schema::create('user', function (Blueprint $table) {
+    $table->id();
+    $table->string('username');
+    $table->string('password');
+    $table->string('email');
+    $table->timestamps();
+});
+
     }
 
     /**
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users1');
+        Schema::dropIfExists('user');
     }
 };

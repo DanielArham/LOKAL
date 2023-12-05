@@ -30,36 +30,25 @@
             <h5 style="text-align: center">silahkan login dahulu</h5>
           </div>
           <div class="card-body" style="background-color: #5CB8E4">
-            <form autocomplete="off" action="" class="" method="POST">
+            <form autocomplete="off" action="{{ route('login.store') }}" class="" method="POST">
+              @csrf
               <input type="hidden" id="action" value="login" />
               <div class="m-2">
-                <input
-                  type="text"
-                  class="form-control login__input"
-                  name="username"
-                  placeholder="masukkan username"
-                  id="username"
-                  value=""
-                />
+                <input type="text" name="username" placeholder="Username" required><br>
+
               </div>
               <div class="m-2">
-                <input
-                  type="password"
-                  class="form-control login__input"
-                  name="password"
-                  placeholder="masukkan password"
-                  id="password"
-                  value=""
-                />
+                <input type="password" name="password" placeholder="Password" required><br>
+
               </div>
               <div class="m-2" style="float: center">
-                <button class="btn btn-danger" type="button" onclick="submitData();">Masuk</button>
+                <button class="btn btn-danger" type="submit">Masuk</button>
               </div>
               <div>
                 <a href="lupapassword" style="color: white">Lupa password?</a>
               </div>
               <div>
-                <a href="register.php" style="color: white">Belum punya akun?</a>
+                <a href="/Registration" style="color: white">Belum punya akun?</a>
               </div>
             </form>
           </div>
