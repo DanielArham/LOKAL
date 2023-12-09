@@ -2,10 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <title>Pendaftaran Akun</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            background-color: #add8e6;
         }
         .container {
             max-width: 400px;
@@ -54,12 +56,13 @@
     @csrf
 
     <input type="text" name="new-email" placeholder="Email" required><br>
+    <input type="text" name="new-phone" placeholder="Nomor Handphone" required><br>
     <input type="text" name="new-username" placeholder="Username" required><br>
     <input type="password" name="new-password" id="new-password" placeholder="Password" required><br>
     <span id="password-validation-message"></span><br>
     <button type="submit" class="btn" id="registration-button" disabled>Daftar</button>
 </form>
-        <a href="/Login" id="login-link">Sudah punya akun? Masuk</a>
+        <a href="/login" id="login-link">Sudah punya akun? Masuk</a>
     </div>
 
     <script>

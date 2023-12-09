@@ -65,9 +65,17 @@
               <a style="color: #181818" class="nav-link" href="/cara-pemesanan">Cara Pemesanan</a>
             </li>
             <li class="nav-item">
-                <button id="dark-mode-toggle"  type="button" class="btn btn-info"><a href="/login">Masuk</a></button>
-              </li>
-            
+
+                <?php
+                session_start(); 
+                if (auth()->check()) {
+                    echo '<button id="dark-mode-toggle" style="color: white; font-size: 20px; font-family: Poppins;" type="button" class="btn btn-info"><a href="/logout">Keluar</a></button>';
+                } else {
+                    echo '<button id="dark-mode-toggle" style="color: white; font-size: 20px; font-family: Poppins;" type="button" class="btn btn-info"><a href="/login">Masuk</a></button>';
+                }
+                ?>
+                  
+     </li>
           </ul>
         </div>
       </div>

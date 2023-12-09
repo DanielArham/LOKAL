@@ -42,6 +42,11 @@ Route::get('/website', [AuthController::class, 'website']);
 Route::get('/Registration', [RegistrationController::class, 'showRegistrationForm']);
 Route::post('/Registration', [RegistrationController::class, 'register'])->name('register.store');
 
+Route::get('/logout', function () {
+    return view('logout');
+});
+
+
 
 
 
