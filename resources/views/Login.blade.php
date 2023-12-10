@@ -3,6 +3,9 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
+    <meta name="author" content="LOKAL." />
+    <title>Login | LOKAL.</title>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 

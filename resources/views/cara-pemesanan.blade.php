@@ -8,8 +8,8 @@
     <title>Cara Pemesanan | LOKAL.</title>
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fahli.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="img/logo.png" />
-   
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
+
   </head>
 
   <body>

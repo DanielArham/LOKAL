@@ -9,12 +9,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fahli.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
-<<<<<<< HEAD
-
-=======
->>>>>>> b55d5d87dcc6a76b04b9ed0b22622646d82c927c
   </head>
-  <body>
   <body>
  <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark justify-content-between fixed-top navbar-fixed-top">
@@ -47,7 +42,7 @@
               <a class="nav-link" href="#contact">Hubungi Kami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cara-pemesanan.html">Cara Pemesanan</a>
+              <a class="nav-link" href="/cara-pemesanan">Cara Pemesanan</a>
             </li>
             <?php
                 session_start();

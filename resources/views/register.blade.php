@@ -4,6 +4,9 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="author" content="LOKAL." />
+    <title>Register | LOKAL.</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
@@ -301,7 +304,7 @@
                 <script>
                     // Ambil notifikasi dari sesi
                     var successMessage = "{{ session('success') }}";
-            
+
                     // Tampilkan popup jika notifikasi berhasil
                     if (successMessage) {
                         alert(successMessage);
