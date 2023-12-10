@@ -5,7 +5,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\user;
+use App\Models\User;
 use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
@@ -16,19 +16,23 @@ class AuthController extends Controller
     }
 
     public function login(Request $request)
-    {
-        $inputUsername = $request->input('username');
-        $inputPassword = $request->input('password');
+{
+    $inputUsername = $request->input('username');
+    $inputPassword = $request->input('password');
 
-        $user = user::where('username', $inputUsername)->first();
+    $user = User::where('username', $inputUsername)->first();
 
-        if ($user && password_verify($inputPassword, $user->password)) {
-            Session::put('username', $inputUsername);
-            return redirect('/website');
-        } else {
-            return redirect('/login');
-        }
+    if ($user && password_verify($inputPassword, $user->password)) {
+        // Menyimpan data nomor hp dalam session
+        Session::put('username', $inputUsername);
+        Session::put('nomor_hp', $user->nomor_hp);
+
+        return redirect('/website');
+    } else {
+        return redirect('/login');
     }
+}
+
 
     public function website()
     {

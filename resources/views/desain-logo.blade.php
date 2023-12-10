@@ -55,7 +55,7 @@
     <div id="startchange"></div>
     <div class="jumbotron-top">
       <div class="container jumbcn">
-        <a class="back" href="index.html"> <img src="{{ asset('images/back.png') }}" height="15px" />&nbsp;&nbsp;Back </a>
+        <a class="back" href="/"> <img src="{{ asset('images/back.png') }}" height="15px" />&nbsp;&nbsp;Back </a>
         <div class="row">
           <div class="col-12 col-md-4 my-auto order-md-2">
             <p class="text-md-center">
@@ -98,7 +98,8 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button  class="btn btn-info shadow-lg" onclick="location.href='/checkoutt'">Pesan</button>
+                <button  class="btn btn-info shadow-lg"  onclick="redirectToCheckout('/checkout', 'Logo Paket Kaki 5', 50000)">Pesan</button>
+              </div>
               </div>
             </div>
           </div>
@@ -120,7 +121,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="order('Desain Logo Paket Istimewa')">Pesan</button>
+                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Istimewa ', 250000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -143,7 +144,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="order('Desain Logo Paket Bintang 5')">Pesan</button>
+                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Bintang 5 ', 1000000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -181,5 +182,19 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/fahli.js"></script>
+    <script>
+      function redirectToCheckout(url, serviceName, price) {
+          // Menggunakan URLSearchParams untuk menyusun parameter URL
+          const params = new URLSearchParams();
+          params.append('serviceName', serviceName);
+          params.append('price', price);
+  
+          // Menggabungkan URL dengan parameter
+          const urlWithParams = `${url}?${params.toString()}`;
+  
+          // Mengarahkan pengguna ke halaman checkout dengan parameter serviceName dan price
+          window.location.href = urlWithParams;
+      }
+  </script>
   </body>
 </html>

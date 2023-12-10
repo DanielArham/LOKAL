@@ -1,6 +1,5 @@
 <?php
 
-// app/Http/Controllers/RegistrationController.php
 
 namespace App\Http\Controllers;
 
@@ -38,6 +37,7 @@ class RegistrationController extends Controller
         $user->role = $role;
         $user->save();
 
-        return redirect('/login');
+        return redirect('/login')->with('success', 'Registrasi berhasil! Silakan masuk dengan akun Anda.');
     }
-}
+    }
+

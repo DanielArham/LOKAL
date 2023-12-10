@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <style>
         * {
             padding: 0;
@@ -255,26 +253,31 @@
     </style>
 </head>
 
-</html>
-
 <body>
 
     <div class="container">
         <div class="img">
-            <img src="{{ asset('images/vektor2.png') }}" alt="Deskripsi Gambar">
+            <img src="{{ asset('images/vektor1.png') }}" alt="Deskripsi Gambar">
         </div>
         <div class="login-content">
-            <form autocomplete="off" action="{{ route('login.store') }}" class="" method="POST">
+            <form autocomplete="off" action="{{ route('reset.password') }}" class="" method="POST">
                 @csrf
                 <img src="{{ asset('images/logo.png') }}" alt="Deskripsi Gambar">
-                <h3 class="title">Yuk, Daftar atau Masuk</h3>
-                <h3 class="title">GRATIS!</h3>
+                <h3 class="title">Ganti Password</h3>
                 <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="div">
-                        <input type="text" name="username"  placeholder="Username" required>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" name="phone" placeholder="Nomor Handphone" required>
                     </div>
                 </div>
                 <div class="input-div pass">
@@ -282,15 +285,16 @@
                         <i class="fas fa-lock"></i>
                     </div>
                     <div class="div">
-                      <input type="password" name="password" class="input" placeholder="Password" required>
+                        <input type="password" name="new-password" class="input" placeholder="New Password" required>
                     </div>
                 </div>
-                <a href="/reset-password">Forgot Password?</a>
-                <button type="submit" class="btn">LOGIN</button>
-                <a class="text" style="text-align: center" href="/Registration">Belum Punya Akun? Daftar</a>
+                <button type="submit" class="btn">GANTI PASSWORD</button>
+                <a class="text" style="text-align: center" href="/login">Kembali ke Halaman Login</a>
             </form>
         </div>
     </div>
     <script src="{{ asset('main.js') }}"></script>
 
 </body>
+
+</html>

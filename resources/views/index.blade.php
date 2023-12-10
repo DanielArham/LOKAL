@@ -9,6 +9,10 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fahli.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
+<<<<<<< HEAD
+
+=======
+>>>>>>> b55d5d87dcc6a76b04b9ed0b22622646d82c927c
   </head>
   <body>
   <body>
