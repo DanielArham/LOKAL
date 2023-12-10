@@ -11,9 +11,7 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
 </head>
 <body>
-
 <section>
-
 <div class="d-flex justify-content-center">
         <div class="wrap py-3 col-md-7">
         <div class="card features-2 shadow-lg">
@@ -38,9 +36,7 @@
                 </div>
             </div>
         </div>
-
         </div>  </div>
-
     <script type="text/javascript">
 
     var limit = new Date().toLocaleString("en-US", {timeZone: "Asia/Jakarta"}).slice(0,10).replace(/\//g,'-') + " 23:59:59";
