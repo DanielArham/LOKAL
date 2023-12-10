@@ -7,6 +7,9 @@
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
     <style>
         body
+        {
+            font-family: poppins;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -122,7 +125,7 @@
             <p><span id="totalTagihan"></span></p>
         </div>
         <div class="button-container">
-            <a href="#" class="payment-button">Pembayaran</a>
+            <a href="/bayar" class="payment-button">Pembayaran</a>
         </div>
     </div>
     <script>
@@ -137,6 +140,8 @@
             document.getElementById('hargaPaket').innerText = formatRupiah(price.toString(), 'Rp ');
             document.getElementById('totalTagihan').innerText = formatRupiah(price.toString(), 'Rp ');
             document.getElementById('totalPembayaran').innerText = formatRupiah(price.toString(), 'Rp ');
+            
+
 
 
             // Mengatur nilai pada input hidden untuk dikirim saat submit formulir

@@ -22,11 +22,13 @@
                     <h1 class="text-monospace">Pembayaran</h1>
                     <p class="lead mb-0">
                         <span class="text-secondary">Total Pembayaran: </span>
-                        <small class="align-top text-secondary">Rp</small> 
+                        <small class="align-top text-secondary">Rp</small> <span id="totaltransfer">
                     </p>
                 </div>
                 <div class="card shadow-sm">
                     <div class="card-body">
+                    <input type="hidden" id="hiddenPaket" name="hiddenPaket">
+                        <input type="hidden" id="hiddenHarga" name="hiddenHarga">
                         <p class="lead text-center mb-4">
                             Batas Waktu Pembayaran <br>
                             <span class="text-danger" id="limit"></span> <br>
@@ -71,7 +73,40 @@
             document.getElementById("clock").innerHTML = "EXPIRED";
         }
     }, 1000);
+
+    document.addEventListener("DOMContentLoaded", function () {
+    // Get parameters from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceName = urlParams.get('serviceName');
+    const price = urlParams.get('price');
+
+    // Display values on the checkout page
+    document.getElementById('totaltransfer').innerText = formatRupiah(price, 'Rp ');
+
+    // Set values for hidden form input fields
+    document.getElementById('hiddenPaket').value = serviceName;
+    document.getElementById('hiddenHarga').value = price;
+});
+
+// Function to format numbers into Indonesian Rupiah format
+function formatRupiah(angka, prefix) {
+    var number_string = angka.toString().replace(/[^,\d]/g, ''),
+        split = number_string.split(','),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+    if (ribuan) {
+        separator = sisa ? '.' : '';
+        rupiah += separator + ribuan.join('.');
+    }
+
+    rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
+    return prefix === undefined ? rupiah : rupiah ? 'Rp ' + rupiah : '';
+}
+
     </script>
+
 </section>
 <section id="why-us" class="container section">
       <div class="row equal">

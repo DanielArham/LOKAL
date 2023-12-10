@@ -93,7 +93,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-purple shadow-lg" onclick="order('Desain Logo Paket Kaki 5')">Pesan</button>
+                <button class="btn btn-purple shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Kaki 5', 50000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-purple shadow-lg" onclick="order('Desain Logo Paket Istimewa')">Pesan</button>
+                <button class="btn btn-purple shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Istimewa', 250000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -138,7 +138,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-purple shadow-lg" onclick="order('Desain Logo Paket Bintang 5')">Pesan</button>
+                <button class="btn btn-purple shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Bintang 5', 1000000)">Pesan</button>
               </div>
             </div>
           </div>
