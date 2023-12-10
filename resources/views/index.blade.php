@@ -48,9 +48,9 @@
             <?php
                 session_start();
                 if (auth()->check()) {
-                    echo '<button id="dark-mode-toggle"  type="button" class="btn btn-info"><a href="/logout">Keluar</a></button>';
+                    echo '<button id="light-mode-toggle"  type="button" class="btn btn-info"><a href="/logout">Keluar</a></button>';
                 } else {
-                    echo '<button id="dark-mode-toggle"  type="button" class="btn btn-info"><a href="/login">Masuk</a></button>';
+                    echo '<button id="light-mode-toggle"  type="button" class="btn btn-info"><a href="/login">Masuk</a></button>';
                 }
                 ?>
           </ul>
