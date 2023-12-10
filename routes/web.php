@@ -35,6 +35,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/bayar', function () {
+    return view('bayar');
+});
 Route::get('/login', [AuthController::class, 'showLoginForm']);
 Route::post('/login', [AuthController::class, 'login'])->name('login.store');
 Route::get('/website', [AuthController::class, 'website']);
