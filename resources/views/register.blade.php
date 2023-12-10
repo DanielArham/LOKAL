@@ -1,88 +1,313 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <title>Pendaftaran Akun</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #add8e6;
+            overflow: hidden;
         }
+
+        .wave {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            z-index: -1;
+        }
+
         .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 7rem;
+            padding: 0 2rem;
+        }
+
+        .img {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .login-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
             text-align: center;
         }
-        h2 {
-            margin-bottom: 20px;
+
+        .img img {
+            width: 500px;
         }
-        input[type="text"], input[type="password"] {
+
+        form {
+            width: 360px;
+        }
+
+        .login-content img {
+            height: 100px;
+        }
+
+        .login-content h2 {
+            margin: 15px 0;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2.9rem;
+        }
+
+        .login-content .input-div {
+            position: relative;
+            display: grid;
+            grid-template-columns: 7% 93%;
+            margin: 25px 0;
+            padding: 5px 0;
+            border-bottom: 2px solid #d9d9d9;
+        }
+
+        .login-content .input-div.one {
+            margin-top: 0;
+        }
+
+        .i {
+            color: #d9d9d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .input-div>div {
+            position: relative;
+            height: 45px;
+        }
+
+        .input-div>div>h5 {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            font-size: 18px;
+            transition: .3s;
+        }
+
+        .input-div:before,
+        .input-div:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            width: 0%;
+            height: 2px;
+            background-color: #38d39f;
+            transition: .4s;
+        }
+
+        .input-div:before {
+            right: 50%;
+        }
+
+        .input-div:after {
+            left: 50%;
+        }
+
+        .input-div.focus:before,
+        .input-div.focus:after {
+            width: 50%;
+        }
+
+        .input-div.focus>div>h5 {
+            top: -5px;
+            font-size: 15px;
+        }
+
+        .input-div>div>input {
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .btn {
-            background-color: #007bff;
-            color: #fff;
-            padding: 10px 20px;
+            height: 100%;
             border: none;
-            border-radius: 5px;
+            outline: none;
+            background: none;
+            padding: 0.5rem 0.7rem;
+            font-size: 1.2rem;
+            color: #555;
+            font-family: 'poppins', sans-serif;
+        }
+
+        .input-div.pass {
+            margin-bottom: 4px;
+        }
+
+        a {
+            display: block;
+            text-align: right;
+            text-decoration: none;
+            color: #999;
+            font-size: 0.9rem;
+            transition: .3s;
+        }
+
+        a:hover {
+            color: #2ca2f0;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            height: 50px;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-image: linear-gradient(to right, #205ec1, #205ec1, #205ec1);
+            background-size: 200%;
+            font-size: 1.2rem;
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            margin: 1rem 0;
             cursor: pointer;
         }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-        #login-link {
+
+        .google-button {
+            background-color: #fff;
+            /* Set the background color of the button */
+            border: 1px solid #ccc;
+            /* Add a border for better visibility */
+            padding: 10px;
+            /* Add padding to the button */
+            display: flex;
+            /* Use flexbox to align items */
+            align-items: center;
+            /* Center items vertically */
+            justify-content: center;
+            /* Center items horizontally */
+            width: 100%;
+            /* Set the button to full width */
             margin-top: 10px;
-            color: #007bff;
-            text-decoration: none;
+            /* Add margin on top */
         }
-        #password-validation-message {
-            color: red;
+
+        .google-button img {
+            max-width: 40px;
+            /* Set the maximum width of the image */
+            max-height: 40px;
+            margin-right: 15px;
+            /* Add some spacing between the image and text */
+        }
+
+        .btn:hover {
+            background-position: right;
+        }
+
+        @media screen and (max-width: 1050px) {
+            .container {
+                grid-gap: 5rem;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            form {
+                width: 290px;
+            }
+
+            .login-content h2 {
+                font-size: 2.4rem;
+                margin: 8px 0;
+            }
+
+            .img img {
+                width: 400px;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .img {
+                display: none;
+            }
+
+            .wave {
+                display: none;
+            }
+
+            .login-content {
+                justify-content: center;
+            }
         }
     </style>
 </head>
+
 <body>
+
     <div class="container">
-        <h2>Pendaftaran Akun</h2>
-        
-<form id="registration-form" method="POST" action="{{ route('register.store') }}">
-    @csrf
-
-    <input type="text" name="new-email" placeholder="Email" required><br>
-    <input type="text" name="new-phone" placeholder="Nomor Handphone" required><br>
-    <input type="text" name="new-username" placeholder="Username" required><br>
-    <input type="password" name="new-password" id="new-password" placeholder="Password" required><br>
-    <span id="password-validation-message"></span><br>
-    <button type="submit" class="btn" id="registration-button" disabled>Daftar</button>
-</form>
-        <a href="/login" id="login-link">Sudah punya akun? Masuk</a>
-    </div>
-
-    <script>
-        // Validasi password di sisi klien
-        document.getElementById("new-password").addEventListener("keyup", function () {
-            var password = this.value;
-            var passwordValidationMessage = document.getElementById("password-validation-message");
-            var registrationButton = document.getElementById("registration-button");
-
-            // RegEx untuk memeriksa apakah password memiliki setidaknya satu huruf dan satu angka
-            var regex = /^(?=.*[a-zA-Z])(?=.*\d).+$/;
-
-            if (regex.test(password)) {
-                passwordValidationMessage.innerText = "";
-                registrationButton.disabled = false;
-            } else {
-                passwordValidationMessage.innerText = "Password harus memiliki setidaknya satu huruf dan satu angka.";
-                registrationButton.disabled = true;
-            }
-        });
-    </script>
+        <div class="img">
+            <img src="{{ asset('images/vektor.png') }}" alt="Deskripsi Gambar">
+        </div>
+        <div class="login-content">
+            <form autocomplete="off" action="{{ route('register.store') }}" class="" method="POST">
+                @csrf
+                <img src="{{ asset('images/logo.png') }}" alt="Deskripsi Gambar">
+                <h3 class="title">Yuk, Daftar atau Masuk</h3>
+                <h3 class="title">GRATIS!</h3>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" name="new-email" placeholder="Email" required>
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" name="new-phone" placeholder="Nomor Handphone" required>
+                    </div>
+                </div>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" name="new-username" placeholder="Username" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" name="new-password" class="input" placeholder="Password" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn">DAFTAR</button>
+                <a class="text" style="text-align: center" href="/login">Sudah Punya Akun? Masuk</a>
+                <script>
+                    // Ambil notifikasi dari sesi
+                    var successMessage = "{{ session('success') }}";
+            
+                    // Tampilkan popup jika notifikasi berhasil
+                    if (successMessage) {
+                        alert(successMessage);
+                    }
+                </script>
+                <script src="{{ asset('main.js') }}"></script>
 </body>
+
 </html>

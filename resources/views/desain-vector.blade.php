@@ -95,7 +95,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="order('Desain Vector Paket Kaki 5')">Pesan</button>
+                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Kaki 5 ', 50000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="order('Desain Vector Paket Istimewa')">Pesan</button>
+                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Istimewa ', 250000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="order('Desain Vector Paket Bintang 5')">Pesan</button>
+                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Bintang 5 ', 1000000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -191,5 +191,19 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/fahli.js"></script>
+    <script>
+      function redirectToCheckout(url, serviceName, price) {
+          // Menggunakan URLSearchParams untuk menyusun parameter URL
+          const params = new URLSearchParams();
+          params.append('serviceName', serviceName);
+          params.append('price', price);
+  
+          // Menggabungkan URL dengan parameter
+          const urlWithParams = `${url}?${params.toString()}`;
+  
+          // Mengarahkan pengguna ke halaman checkout dengan parameter serviceName dan price
+          window.location.href = urlWithParams;
+      }
+  </script>
   </body>
 </html>
