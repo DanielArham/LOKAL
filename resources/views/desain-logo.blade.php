@@ -12,15 +12,11 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fahli.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}" />
-   
-
-
   </head>
-
   <body>
     <nav class="navbar navbar-expand-md navbar-dark justify-content-between fixed-top navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="/"><img style="height: 40px" src="{{ asset('images/logo.png') }}" /></a>
+        <a class="navbar-brand" href="/"><img style="height: 40px" src="images/logo.png" /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -54,11 +50,11 @@
     <div id="startchange"></div>
     <div class="jumbotron-top">
       <div class="container jumbcn">
-        <a class="back" href="/"> <img src="{{ asset('images/back.png') }}" height="15px" />&nbsp;&nbsp;Back </a>
+        <a class="back" href="/"> <img src="images/back.png" height="15px" />&nbsp;&nbsp;Back </a>
         <div class="row">
           <div class="col-12 col-md-4 my-auto order-md-2">
             <p class="text-md-center">
-              <img class="people-img" src="{{ asset('images/people.png') }}" />
+              <img class="people-img" src="images/people.png" />
             </p>
           </div>
           <div class="col-12 col-md-8 my-auto order-md-1">
@@ -68,7 +64,7 @@
                 Pada umumnya, manusia cenderung lebih mudah <br />untuk mengingat sesuatu secara visual. Maka dari itu
                 logo <br />yang menarik akan membuat perusahaan diingat oleh banyak orang.
               </p>
-              <button class="btn btn-info" onclick="location.href='#products'"><b>Pesan Sekarang</b></button>
+              <button class="btn btn-yellow" onclick="location.href='#products'"><b>Pesan Sekarang</b></button>
             </div>
           </div>
         </div>
@@ -97,8 +93,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button  class="btn btn-info shadow-lg"  onclick="redirectToCheckout('/checkout', 'Logo Paket Kaki 5', 50000)">Pesan</button>
-              </div>
+                <button class="btn btn-purple shadow-lg" onclick="order('Desain Logo Paket Kaki 5')">Pesan</button>
               </div>
             </div>
           </div>
@@ -120,7 +115,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Istimewa ', 250000)">Pesan</button>
+                <button class="btn btn-purple shadow-lg" onclick="order('Desain Logo Paket Istimewa')">Pesan</button>
               </div>
             </div>
           </div>
@@ -143,7 +138,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Logo Paket Bintang 5 ', 1000000)">Pesan</button>
+                <button class="btn btn-purple shadow-lg" onclick="order('Desain Logo Paket Bintang 5')">Pesan</button>
               </div>
             </div>
           </div>

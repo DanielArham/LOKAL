@@ -130,7 +130,7 @@
                       </span>
                   </div>
                   <div class="bottom-pos text-center">
-                      <button class="btn btn-purple shadow-lg" onclick="location.href='desain-logo.html'">Lebih Lanjut</button>
+                      <button class="btn btn-purple shadow-lg" onclick="location.href='/jasalogo'">Lebih Lanjut</button>
                   </div>
               </div>
           </div>
@@ -146,7 +146,7 @@
                       </span>
                   </div>
                   <div class="bottom-pos text-center">
-                      <button class="btn btn-purple shadow-lg" onclick="location.href='desain-vector.html'">Lebih Lanjut</button>
+                      <button class="btn btn-purple shadow-lg" onclick="location.href='/jasavector'">Lebih Lanjut</button>
                   </div>
               </div>
           </div>
@@ -162,7 +162,7 @@
                       </span>
                   </div>
                   <div class="bottom-pos text-center">
-                      <button class="btn btn-purple shadow-lg" onclick="location.href='desain-brosur.html'">Lebih Lanjut</button>
+                      <button class="btn btn-purple shadow-lg" onclick="location.href='/jasabrosur'">Lebih Lanjut</button>
                   </div>
               </div>
           </div>

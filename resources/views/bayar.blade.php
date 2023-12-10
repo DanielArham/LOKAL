@@ -22,7 +22,7 @@
                     <h1 class="text-monospace">Pembayaran</h1>
                     <p class="lead mb-0">
                         <span class="text-secondary">Total Pembayaran: </span>
-                        <small class="align-top text-secondary">Rp</small>1.700.000
+                        <small class="align-top text-secondary">Rp</small> 
                     </p>
                 </div>
                 <div class="card shadow-sm">
@@ -140,9 +140,9 @@
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
                   <h4 class="mb-0">
-                                Silahkan Konfirmasi Pada Nomor Di Bawah Jika Sudah Melakukan Pembayaran dan Kirim Bukti Pembayaran
+                                Silahkan konfirmasi pada nomor dibawah jika sudah melakukan pembayaran dan kirim bukti pembayaran
 </h4> <br><br>
-                            <a href="https://wa.me/085856267775" class="btn btn-info" target="_blank">
+                            <a href="https://wa.me/085856267775" class="btn btn-purple" target="_blank">
                                 Hubungi via WhatsApp
                             </a>
                   </span>
@@ -150,6 +150,9 @@
           </div>
     </div>
     <br>
-
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><img src="images/top.png" width="15px"></a>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/fahli.js"></script>
 </body>
 </html>

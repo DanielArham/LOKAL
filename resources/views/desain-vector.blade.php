@@ -12,13 +12,13 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fahli.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}" />
-    
+
   </head>
 
   <body>
     <nav class="navbar navbar-expand-md navbar-dark justify-content-between fixed-top navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img style="height: 40px" src="{{ asset('images/logo.png') }}" /></a>
+        <a class="navbar-brand" href="/"><img style="height: 40px" src="{{ asset('images/logo.png') }}" /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -52,7 +52,7 @@
     <div id="startchange"></div>
     <div class="jumbotron-top">
       <div class="container jumbcn">
-        <a class="back" href="index.html"> <img src="{{ asset('images/back.png') }}" height="15px" />&nbsp;&nbsp;Back </a>
+        <a class="back" href="/"> <img src="{{ asset('images/back.png') }}" height="15px" />&nbsp;&nbsp;Back </a>
         <div class="row">
           <div class="col-12 col-md-4 my-auto order-md-2">
             <p class="text-md-center">
@@ -65,7 +65,7 @@
               <p>
                 Vector adalah salah satu cara untuk<br />mengekspresikan dirimu dalam bentuk yang unik<br />dan berbeda.
               </p>
-              <button class="btn btn-info" onclick="location.href='#products'"><b>Pesan Sekarang</b></button>
+              <button class="btn btn-yellow" onclick="location.href='#products'"><b>Pesan Sekarang</b></button>
             </div>
           </div>
         </div>
@@ -94,7 +94,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Kaki 5 ', 50000)">Pesan</button>
+                <button class="btn btn-yellow shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Kaki 5 ', 50000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Istimewa ', 250000)">Pesan</button>
+                <button class="btn btn-yellow shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Istimewa ', 250000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@
                 </span>
               </div>
               <div class="bottom-pos text-center">
-                <button class="btn btn-info shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Bintang 5 ', 1000000)">Pesan</button>
+                <button class="btn btn-yellow shadow-lg" onclick="redirectToCheckout('/checkout', 'Vector Paket Bintang 5 ', 1000000)">Pesan</button>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@
     <div style="background-color: #5cb8e4; padding: 10px; padding-top: 24px">
       <p class="text-center" style="color: white; font-size: 17px">Copyright &copy; LOKAL. 2023</p>
     </div>
-    <a id="back-to-top" href="#" class="btn btn-info btn-lg back-to-top" role="button"
+    <a id="back-to-top" href="#" class="btn btn-yellow btn-lg back-to-top" role="button"
       ><img src="{{ asset('images/top.png') }}" width="15px"
     /></a>
     <script src="js/jquery.js"></script>

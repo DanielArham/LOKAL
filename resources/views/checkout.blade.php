@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+        body
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -78,7 +77,7 @@
 </head>
 <body>
     <div class="container">
-       
+
 <div class="row">
     <div class="col-md-6">
         <h4>Informasi Pembeli</h4>
@@ -139,12 +138,12 @@
             document.getElementById('totalTagihan').innerText = formatRupiah(price.toString(), 'Rp ');
             document.getElementById('totalPembayaran').innerText = formatRupiah(price.toString(), 'Rp ');
 
-    
+
             // Mengatur nilai pada input hidden untuk dikirim saat submit formulir
             document.getElementById('hiddenPaket').value = serviceName;
             document.getElementById('hiddenHarga').value = price;
         });
-    
+
         // Fungsi untuk format angka ke dalam format rupiah
         function formatRupiah(angka, prefix) {
             var number_string = angka.toString().replace(/[^,\d]/g, ''),
@@ -152,18 +151,18 @@
                 sisa = split[0].length % 3,
                 rupiah = split[0].substr(0, sisa),
                 ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-    
+
             if (ribuan) {
                 separator = sisa ? '.' : '';
                 rupiah += separator + ribuan.join('.');
             }
-    
+
             rupiah = split[1] !== undefined ? rupiah + ',' + split[1] : rupiah;
             return prefix === undefined ? rupiah : rupiah ? 'Rp ' + rupiah : '';
         }
-  
+
     </script>
-    
+
 </body>
 
 
