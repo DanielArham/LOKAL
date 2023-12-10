@@ -9,15 +9,17 @@
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/fahli.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logokecil.png') }}">
+<<<<<<< HEAD
 
+=======
+>>>>>>> b55d5d87dcc6a76b04b9ed0b22622646d82c927c
   </head>
-
- 
+  <body>
   <body>
  <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-dark justify-content-between fixed-top navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href=""><img style="height: 40px" src="{{ asset('images/logo.png') }}" /></a>
+        <a class="navbar-brand" href=""><img style="height: 40px" src="images/logo.png" /></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -31,34 +33,30 @@
         </button>
 
         <div class="collapse navbar-collapse justify-content-between" id="nav1">
-          <ul  class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a style="color: #5CB8E4" class="nav-link" href="#">Home</a>
+              <a class="nav-link" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a style="color: #181818" class="nav-link" href="#products">Produk</a>
+              <a class="nav-link" href="#products">Produk</a>
             </li>
             <li class="nav-item">
-              <a style="color: #181818" class="nav-link" href="#review">Ulasan</a>
+              <a class="nav-link" href="#review">Ulasan</a>
             </li>
             <li class="nav-item">
-              <a style="color: #181818" class="nav-link" href="#contact">Hubungi Kami</a>
+              <a class="nav-link" href="#contact">Hubungi Kami</a>
             </li>
             <li class="nav-item">
-              <a style="color: #181818" class="nav-link" href="/cara-pemesanan">Cara Pemesanan</a>
+              <a class="nav-link" href="cara-pemesanan.html">Cara Pemesanan</a>
             </li>
-            <li class="nav-item">
-
-                <?php
-                session_start(); 
+            <?php
+                session_start();
                 if (auth()->check()) {
-                    echo '<button id="dark-mode-toggle" style="color: white; font-size: 20px; font-family: Poppins;" type="button" class="btn btn-info"><a href="/logout">Keluar</a></button>';
+                    echo '<button id="dark-mode-toggle"  type="button" class="btn btn-info"><a href="/logout">Keluar</a></button>';
                 } else {
-                    echo '<button id="dark-mode-toggle" style="color: white; font-size: 20px; font-family: Poppins;" type="button" class="btn btn-info"><a href="/login">Masuk</a></button>';
+                    echo '<button id="dark-mode-toggle"  type="button" class="btn btn-info"><a href="/login">Masuk</a></button>';
                 }
                 ?>
-                  
-     </li>
           </ul>
         </div>
       </div>
@@ -69,7 +67,7 @@
         <div class="row">
           <div class="col-12 col-md-4 my-auto order-md-2">
             <p class="text-md-center">
-              <img class="people-img" src="{{ asset('images/people.png') }}" />
+              <img class="people-img" src="images/people.png" />
             </p>
           </div>
           <div class="col-12 col-md-8 my-auto order-md-1" >
@@ -77,7 +75,7 @@
               <p class="lead">Halo, Selamat Datang</p>
               <h1>Jasa bikin desain grafis<br />untuk semua kebutuhan Anda</h1>
               <p>Sekarang anda bisa fokus berbisnis,<br />tentang desain biar kami yang atasi</p>
-              <button   class="btn btn-info" onclick="location.href='#products'"><b>Pesan Sekarang</b></button>
+              <button class="btn btn-yellow" onclick="location.href='#products'"><b>Pesan Sekarang</b></button>
             </div>
           </div>
         </div>
@@ -91,7 +89,7 @@
           <div class="col-12 col-md-4 spc">
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
-                      <img src="{{ asset('images/kreatif.png') }}" style="width: 100px;">
+                      <img src="images/kreatif.png" style="width: 100px;">
                       <h4>Desain Kreatif</h4>
                       <p>Kami membuat desain yang <b>unik</b> dan <b>menarik</b> untuk setiap produk yang kami jual.</p>
                   </span>
@@ -100,7 +98,7 @@
           <div class="col-12 col-md-4 spc">
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
-                      <img src="{{ asset('images/price.png') }}" style="width: 130px;">
+                      <img src="images/price.png" style="width: 130px;">
                       <h4>Harga Terjangkau</h4>
                       <p>Kami menyediakan produk kualitas <b>terbaik</b> dengan harga yang <b>ramah dikantong</b>. </p>
                   </span>
@@ -109,7 +107,7 @@
           <div class="col-12 col-md-4 spc">
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
-                      <img src="{{ asset('images/proses.png') }}" style="width: 120px;">
+                      <img src="images/proses.png" style="width: 120px;">
                       <h4>Proses Cepat</h4>
                       <p>Kami memroses desain yang anda pesan <b>secepat kilat</b>.</p>
                   </span>
@@ -130,14 +128,14 @@
                   <div class="features-body">
                       <span class="text-center content">
                           <p class="text-center">
-                              <img src="{{ asset('images/paint.png') }}" style="width: 100px;">
+                              <img src="images/paint.png" style="width: 100px;">
                           </p><br>
                           <h4 class="inside">Jasa Desain Logo</h4>
                           <p>Sebuah desain logo merupakan perwakilan sebuah perusahaan.</p>
                       </span>
                   </div>
                   <div class="bottom-pos text-center">
-                      <button class="btn btn-info shadow-lg" onclick="location.href='/jasalogo'">Lebih Lanjut</button>
+                      <button class="btn btn-purple shadow-lg" onclick="location.href='desain-logo.html'">Lebih Lanjut</button>
                   </div>
               </div>
           </div>
@@ -146,14 +144,14 @@
                   <div class="features-body">
                       <span class="text-center content">
                           <p class="text-center">
-                              <img src="{{ asset('images/vector1.png') }}" style="width: 115px;">
+                              <img src="images/vector1.png" style="width: 115px;">
                           </p><br>
                           <h4 class="inside">Jasa Desain Vector</h4>
                       <p>Vector adalah gambar yang terbuat dari beberapa titik dan garis (poligon).</p>
                       </span>
                   </div>
                   <div class="bottom-pos text-center">
-                      <button class="btn btn-info shadow-lg" onclick="location.href='jasavector'">Lebih Lanjut</button>
+                      <button class="btn btn-purple shadow-lg" onclick="location.href='desain-vector.html'">Lebih Lanjut</button>
                   </div>
               </div>
           </div>
@@ -162,14 +160,14 @@
                   <div class="features-body">
                       <span class="text-center content">
                           <p class="text-center">
-                              <img src="{{ asset('images/brosur.png') }}" style="width: 115px;">
+                              <img src="images/brosur.png" style="width: 115px;">
                           </p><br>
                           <h4 class="inside">Jasa Desain Brosur</h4>
                           <p> Brosur adalah bahan informasi tertulis mengenai suatu masalah yang disusun secara bersistem.</p>
                       </span>
                   </div>
                   <div class="bottom-pos text-center">
-                      <button class="btn btn-info shadow-lg" onclick="location.href='/jasabrosur'">Lebih Lanjut</button>
+                      <button class="btn btn-purple shadow-lg" onclick="location.href='desain-brosur.html'">Lebih Lanjut</button>
                   </div>
               </div>
           </div>
@@ -188,7 +186,7 @@
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
                       <div>
-                          <img style="margin-top: -10px; margin-right: 10px;" src="{{ asset('images/user.png') }}" height="40">
+                          <img style="margin-top: -10px; margin-right: 10px;" src="images/user.png" height="40">
                           <span style="font-size: 20px; position: relative;"><b>M. Danial</b></span>
                       </div><br>
                       <h1 style="color: #5CB8E4;">4.1  <small style="font-size: 20px; color: #99A6C0">/ 5</small></h1>
@@ -200,7 +198,7 @@
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
                       <div>
-                          <img style="margin-top: -10px; margin-right: 10px;" src="{{ asset('images/user.png') }}" height="40">
+                          <img style="margin-top: -10px; margin-right: 10px;" src="images/user.png" height="40">
                           <span style="font-size: 20px; position: relative;"><b>M. Zul</b></span>
                       </div><br>
                       <h1 style="color: #5CB8E4;">4.2  <small style="font-size: 20px; color: #99A6C0">/ 5</small></h1>
@@ -212,7 +210,7 @@
               <div class="card features-2 shadow-lg">
                   <span class="text-center content">
                       <div>
-                          <img style="margin-top: -10px; margin-right: 10px;" src="{{ asset('images/user.png') }}" height="40">
+                          <img style="margin-top: -10px; margin-right: 10px;" src="images/user.png" height="40">
                           <span style="font-size: 20px; position: relative;"><b>Intan Nur</b></span>
                       </div><br>
                       <h1 style="color: #5CB8E4;">4.3  <small style="font-size: 20px; color: #99A6C0">/ 5</small></h1>
@@ -237,7 +235,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-3 col-md-2">
-                        <button class="btn btn-block btn-info shadow-lg" onclick="sendmail()">Kirim</button>
+                        <button class="btn btn-block btn-purple-1 shadow-lg" onclick="sendmail()">Kirim</button>
                     </div>
                 </div>
             </div>
@@ -246,19 +244,19 @@
             <div class="row">
                 <div class="col-12 col-sm-4 contact">
                     <div class="contact-item text-center">
-                        <img style="margin-top: -10px; margin-right: 10px;" src="{{ asset('images/whatsapp.png') }}" height="25">
+                        <img style="margin-top: -10px; margin-right: 10px;" src="images/whatsapp.png" height="25">
                         <span style="color: #181818;"font-size: 20px; position: relative;">085856267775</span>
                     </div>
                 </div>
                 <div class="col-12 col-sm-4 contact">
                     <div class="contact-item text-center">
-                        <img style="margin-top: -10px; margin-right: 10px;" src="{{ asset('images/instagram.png') }}" height="25">
+                        <img style="margin-top: -10px; margin-right: 10px;" src="images/instagram.png" height="25">
                         <span style="color: #181818;"font-size: 20px; position: relative;">lokal.</span>
                     </div>
                 </div>
                 <div class="col-12 col-sm-4 contact">
                     <div class="contact-item text-center">
-                        <img style="margin-top: -10px; margin-right: 10px;" src="{{ asset('images/email.png') }}" height="25">
+                        <img style="margin-top: -10px; margin-right: 10px;" src="images/email.png" height="25">
                         <span style="color: #181818;"font-size: 20px; position: relative;">help@lokal.</span>
                     </div>
                 </div>
@@ -269,11 +267,10 @@
     <div style="background-color: #5CB8E4; padding: 10px;">
         <p class="text-center" style="color: #181818; font-size: 17px;">Copyright &copy; LOKAL. 2023</p>
     </div>
-    <a id="back-to-top" href="#" class="btn btn-info btn-lg back-to-top" role="button"><img src="img/top.png" width="15px"></a>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><img src="images/top.png" width="15px"></a>
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/fahli.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
   </body>
 </html>
