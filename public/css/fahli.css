@@ -1,6 +1,6 @@
   .jumbotron-top {
     overflow: hidden;
-  
+
     margin-left: 0px;
     margin-right: 0px;
     height: 600px;
@@ -12,12 +12,12 @@
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
   }
-  
+
   .jumbcn {
     color: #181818 !important;
     padding-top: 100px;
   }
-  
+
   .info-jumbo > .lead {
     font-size: 20px;
     font-weight: 600;
@@ -55,14 +55,14 @@
     font-size: 20px;
     color: #181818;
   }
-  
+
   .btn-yellow {
     border-radius: 8px;
     background-color: #5CB8E4;
     height: 47px;
     width: 202px;
   }
-  
+
   .btn-purple {
     margin-top: 20px;
     border-radius: 8px;
@@ -81,7 +81,7 @@
   nav {
     padding-top: 50px;
   }
-  
+
   nav .navbar-nav li a {
     color: #181818 !important;
   }
@@ -104,20 +104,20 @@
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  
+
   .features {
     border-radius: 20px;
     border: 0px;
     height: 100%;
   }
-  
+
   .features-2 {
     padding: 54px;
     border-radius: 20px;
     border: 0px;
     height: 100%;
   }
-  
+
   .features-body {
     margin-bottom: 54px;
     padding: 54px;
@@ -135,23 +135,23 @@
   .shadow-sm {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
   }
-  
+
   .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
-  
+
   .shadow-lg {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
   }
-  
+
   .shadow-none {
     box-shadow: none !important;
   }
-  
+
   .spc {
     margin-top: 10px;
   }
-  
+
   .email-container {
     margin-right: 50px;
     margin-left: 50px;
@@ -160,27 +160,27 @@
     padding: 10px;
     padding-bottom: -70px;
   }
-  
+
   .email-input {
     border: 0px;
     margin-top: 4px;
     margin-bottom: -10px;
   }
-  
+
   .email-input:focus {
     border: 0px;
     -webkit-appearance: none;
     box-shadow: none !important;
   }
-  
+
   .contact-item {
     color: white;
   }
-  
+
   .contact {
     margin-top: 20px;
   }
-  
+
   .bottom-pos {
     padding-top: 54px;
     position: absolute;
@@ -188,27 +188,27 @@
     bottom: 0px;
     padding-bottom: 54px;
   }
-  
+
   .gallery_product {
     margin-bottom: 30px;
   }
-  
+
   .navbar-fixed-top {
     background-color: transparent;
     border-color: transparent;
     -webkit-transition: background-color 2s; /* Safari */
     transition: background-color 2s;
   }
-  
+
   .navbar-toggle:hover,
   .navbar-default .navbar-toggle:focus {
     background-color: transparent !important;
   }
-  
+
   .how {
     margin-top: 60px;
   }
-  
+
   .back {
     position: absolute;
     margin-top: -20px;
@@ -216,7 +216,7 @@
     color: white;
     text-decoration: none;
   }
-  
+
   .back:focus {
     color: white;
     text-decoration: none;
@@ -236,3 +236,4 @@
     right: 25px;
     display: none;
   }
+
